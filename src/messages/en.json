@@ -1,0 +1,28 @@
+{
+  "Auth": {
+    "login": "Login",
+    "magicLink": "Send Magic Link",
+    "emailLabel": "Email Address",
+    "success": "Check your email for the login link!",
+    "error": "Authentication failed. Please try again."
+  },
+  "Dashboard": {
+    "title": "Your Boards",
+    "createBoard": "Create New Board",
+    "noBoards": "No boards yet. Create your first one!",
+    "boardName": "Board Name"
+  },
+  "Board": {
+    "invite": "Invite Member",
+    "aiGenerate": "AI Sprint Planner",
+    "aiDescribe": "Describe what you want to achieve...",
+    "generate": "Generate Tasks",
+    "loading": "AI is thinking..."
+  },
+  "Common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "loading": "Loading..."
+  }
+}

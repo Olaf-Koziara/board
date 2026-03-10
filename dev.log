@@ -1,0 +1,21 @@
+
+> tmp_app@0.1.0 dev /app
+> next dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.0.2:3001
+- Environments: .env.local
+
+✓ Starting...
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Lea
+thread 'tokio-runtime-worker' (32533) panicked at /build/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:156:17:
+Failed to restore task data (corrupted database or bug): Data for <EcmascriptBrowserChunk as Asset>::content (TaskId 146746))
+
+Caused✓ Compiled in 23ms
+p data for TaskId 146746 from database failed
+    1: Unable to open static sorted file referenced from 00000058.meta
+    2: Unable to open static sorted file 00000054.sst
+    3: No such file or directory (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

@@ -1,0 +1,28 @@
+{
+  "Auth": {
+    "login": "Zaloguj się",
+    "magicLink": "Wyślij Magic Link",
+    "emailLabel": "Adres E-mail",
+    "success": "Sprawdź skrzynkę e-mail, aby otrzymać link do logowania!",
+    "error": "Logowanie nieudane. Spróbuj ponownie."
+  },
+  "Dashboard": {
+    "title": "Twoje Tablice",
+    "createBoard": "Stwórz nową tablicę",
+    "noBoards": "Brak tablic. Stwórz swoją pierwszą!",
+    "boardName": "Nazwa tablicy"
+  },
+  "Board": {
+    "invite": "Zaproś członka",
+    "aiGenerate": "AI Planner Sprintu",
+    "aiDescribe": "Opisz, co chcesz osiągnąć...",
+    "generate": "Generuj Zadania",
+    "loading": "AI myśli..."
+  },
+  "Common": {
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "loading": "Ładowanie..."
+  }
+}
