@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { useState } from 'react'
+import { useState, useTransition } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { usePathname, useRouter } from '@/i18n/routing'
 
@@ -13,6 +13,7 @@ export default function LandingPage() {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
+  const [isPending, startTransition] = useTransition()
   const supabase = createClient()
   const pathname = usePathname()
   const router = useRouter()
@@ -36,13 +37,15 @@ export default function LandingPage() {
 
   const toggleLocale = () => {
     const nextLocale = pathname.startsWith('/pl') ? 'en' : 'pl'
-    router.replace(pathname, { locale: nextLocale })
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale })
+    })
   }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100 via-white to-white">
       <div className="absolute top-4 right-4">
-        <Button variant="ghost" onClick={toggleLocale}>
+        <Button variant="ghost" onClick={toggleLocale} disabled={isPending}>
           {pathname.startsWith('/pl') ? 'EN' : 'PL'}
         </Button>
       </div>
@@ -76,7 +79,7 @@ export default function LandingPage() {
               </Button>
             </form>
             {message && (
-              <p className="mt-4 text-sm text-green-600 font-medium animate-pulse">
+              <p className="mt-4 text-sm text-green-600 font-medium">
                 {message}
               </p>
             )}
